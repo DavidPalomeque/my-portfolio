@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- MATERIALIZE -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script><!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+        <!--<a href="#!" class="brand-logo">Logo</a>-->
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger center-align"><i class="material-icons">menu</i></a>
+        <ul class="hide-on-med-and-down">
+            <li><a class="nav-button" data-target="#section-1">Home</a></li>
+            <li><a class="nav-button" data-target="#section-2">Sobre Mí</a></li>
+            <li><a class="nav-button" data-target="#section-3">Proyectos</a></li>
+            <li><a class="nav-button" data-target="#section-4">Contacto</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="nav-button" data-target="#section-1">Home</a></li>
+        <li><a class="nav-button" data-target="#section-2">Sobre Mí</a></li>
+        <li><a class="nav-button" data-target="#section-3">Proyectos</a></li>
+        <li><a class="nav-button" data-target="#section-4">Contacto</a></li>
+    </ul>
+  
+    <!-- Sections -->
+    <main>
+        <section class="section-1" id="section-1">
+            <h1>Bienvenido a mi Portafolio</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, 
+                ea cumque optio <a href="https://www.google.com" target="_blank">Google.com</a> iusto ab maiores est animi fuga ducimus dolorem rem, 
+                consectetur aliquam suscipit eum? Impedit!</p>
+        </section>
+        <section class="section-2" id="section-2">
+            <h1>Sobre Mí</h1>
+            <p class="custom-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, 
+                ea cumque optio rerum nesciunt nobis asperiores iusto ab maiores est animi fuga ducimus dolorem rem, 
+                consectetur aliquam suscipit eum? Impedit!
+            </p>
+        </section>
+        <section class="section-3" id="section-3">
+        <h1>Mis Proyectos</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, 
+            ea cumque optio <a href="https://www.google.com" target="_blank">Google.com</a> iusto ab maiores est animi fuga ducimus dolorem rem, 
+            consectetur aliquam suscipit eum? Impedit!</p>
+        </section>
+        <section class="section-4" id="section-4">
+            <h1>Contacto</h1>
+            <p class="custom-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, 
+                ea cumque optio rerum nesciunt nobis asperiores iusto ab maiores est animi fuga ducimus dolorem rem, 
+                consectetur aliquam suscipit eum? Impedit!
+            </p>
+        </section>
+    </main>
+  
+
+    <script>
+        //Navbar
+        $(document).ready(function(){
+        $('.sidenav').sidenav();
+        });
+
+        //Navbar buttons smooth scroll
+        $(".nav-button").click(function() {
+            var target = $(this).data("target");
+            $('html, body').animate({
+                scrollTop: $(target).offset().top,
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>
+
+<style>
+nav {
+    background-color: white;
+    box-shadow: none;
+}
+
+nav .brand-logo, nav .sidenav-trigger, nav ul li a, .sidenav li a {
+    color: black;
+    font-weight: 600;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 100vh;
+    padding: 1em 10em 1em 10em;
+}
+section h1 {
+    font-size: 3em;
+}
+section p {
+    font-size: 1.5em;
+}
+.section-1 a {
+    color: black;
+    font-weight: bold;
+}
+.section-3 a {
+    color: white;
+    font-weight: bold;
+}
+.section-1 {
+    background: #ffffff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='789' preserveAspectRatio='none' viewBox='0 0 1920 789'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1338%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c362 C 192%2c395.8 576%2c589 960%2c531 C 1344%2c473 1728%2c163.8 1920%2c72L1920 789L0 789z' fill='rgba(255%2c 86%2c 86%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1338'%3e%3crect width='1920' height='789' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    color: black;
+}
+.section-2 {
+    background: #FF5656;
+    color: white;
+}
+.section-3 {
+    background: #FF5656;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='789' preserveAspectRatio='none' viewBox='0 0 1920 789'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1337%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c362 C 192%2c395.8 576%2c589 960%2c531 C 1344%2c473 1728%2c163.8 1920%2c72L1920 789L0 789z' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1337'%3e%3crect width='1920' height='789' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    color: white;
+}
+.section-4 {
+    background: #ffffff;
+    color: black;
+}
+
+@media (max-width: 1440px) {
+ .section-1, .section-2, .section-3, .section-4 {
+    padding: 0em 3em 0em 3em !important;
+    height: 80vh !important;
+    margin-bottom: -10px;
+ }   
+ .section-1 h1, .section-2 h1, .section-3 h1, .section-4 h1 {
+    margin: 0px;
+ }   
+}
+</style>
